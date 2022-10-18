@@ -6,11 +6,12 @@ Console.OutputEncoding = System.Text.Encoding.UTF8;
 decimal precoInicial = 0;
 decimal precoPorHora = 0;
 
-Console.WriteLine("Seja bem vindo ao sistema de estacionamento!\n" +
-                  "Digite o preço inicial:");
+Console.WriteLine("");
+Console.Write("ABRINDO O SISTEMA DE ESTACIONAMENTO!!\n\n" +
+                  "INFORME O PREÇO INICIAL : ");
 precoInicial = Convert.ToDecimal(Console.ReadLine());
 
-Console.WriteLine("Agora digite o preço por hora:");
+Console.Write("INFORME O PREÇO POR HORA : ");
 precoPorHora = Convert.ToDecimal(Console.ReadLine());
 
 // Instancia a classe Estacionamento, já com os valores obtidos anteriormente
@@ -23,11 +24,12 @@ bool exibirMenu = true;
 while (exibirMenu)
 {
     Console.Clear();
-    Console.WriteLine("Digite a sua opção:");
-    Console.WriteLine("1 - Cadastrar veículo");
-    Console.WriteLine("2 - Remover veículo");
-    Console.WriteLine("3 - Listar veículos");
-    Console.WriteLine("4 - Encerrar");
+    Console.WriteLine("-- SELECIONE SUA OPÇÃO --");
+    Console.WriteLine("");
+    Console.WriteLine("1 - CADASTRAR VEÍCULO");
+    Console.WriteLine("2 - REMOVER VEÍCULO");
+    Console.WriteLine("3 - LISTAR VEÍCULOS");
+    Console.WriteLine("4 - ENCERRAR");
 
     switch (Console.ReadLine())
     {
@@ -48,12 +50,12 @@ while (exibirMenu)
             break;
 
         default:
-            Console.WriteLine("Opção inválida");
+            Console.WriteLine("OPÇÃO INVÁLIDA");
             break;
     }
-
-    Console.WriteLine("Pressione uma tecla para continuar");
-    Console.ReadLine();
+    Console.WriteLine("");
+    Console.WriteLine("PRESSIONE UMA TECLA PARA CONTINUAR");
+    Console.ReadKey(true);
 }
 
-Console.WriteLine("O programa se encerrou");
+Console.WriteLine("!! PROGRAMA ENCERRADO !!");
